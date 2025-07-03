@@ -1,0 +1,32 @@
+*{
+    text-align: center;
+}
+#flex{
+    color: navy;
+}
+h1,h3{
+    font-family: georgia;
+}
+.paragraph{
+    color: white;
+    background-color: cornflowerblue;
+}
+div > button{
+    background-color: purple;
+    color: azure;
+}
+.yes{
+    color: green;
+}
+.no{
+    color: red;
+}
+span{
+    text-decoration: underline;
+    font-style: italic;
+}
+.wrapper p{
+    font-style: bold;
+    color: green;
+    font-weight: 600;
+}
