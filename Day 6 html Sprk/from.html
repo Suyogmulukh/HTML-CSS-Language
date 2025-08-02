@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Students Forms</title>
+</head>
+<body>
+    <h1> Students From</h1>
+    <form>
+       <label for="fn"> First Name: </label> <input type="text" name="firstName" placeholder="First Name" id="fn" required> <br><br>
+       <label for="ln"> Last Name: </label> <input type="text" name="LastName" placeholder="LastName" id="ln" required> <br><br>
+       
+       <label > Gender: </label>
+       <input type="radio" name="Gender" id="male" value="male" required><label for="male"> MALE </label>
+         <input type="radio" name="Gender" id="female" value="female"><label for="female">FEMALE</label>
+            <input type="radio" name="Gender" id="other" value="other"><label for="other">OTHER</label> <br><br>
+    
+         <label for="dob"> Date of Birth: </label> <input type="date" name="dob" id="dob" required> <br><br>
+
+         <label for="contact"> contact No: </label>
+         <select name="Country code">
+            <option value="">Country code</option>
+            <option value="+91">+91</option>
+            <option value="+222">+222</option>
+            <option value="+333">+333</option>
+            <option value="+444">+444</option>
+         </select>
+            <input type="tel" name="contact" placeholder="Contact No" id="contact" required> <br><br>
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset" >
+    </form>
+</body>
+</html>
