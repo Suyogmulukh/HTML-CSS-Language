@@ -1,0 +1,41 @@
+/* 1. universal selector */
+* {
+  margin: 0;
+  padding: 0;
+}
+/* 2. tag selector */
+h1{
+    color: blue;
+    font-size: 90px;
+}
+/* 3. ID selector */
+#wrapper {
+    width: 1000px;
+    background-color: lightgray;
+}
+
+/* 4. class selector */
+.flex {
+    margin-top: 20px;
+    background-color: lightcoral;
+    font-size: 20px;
+}
+
+/* 5. decendant selector*/
+#flex1 h1{
+    color: aqua;
+}
+#flex1 .header1{
+    color: brown;
+}
+/* 6. sibling selector */
+#flex1 h1 + p{
+    color: green;
+    font-size: 30px;
+}
+
+/* 7. child combinator */
+#flex2 > h1{
+    color: red;
+    font-size: 50px;
+}

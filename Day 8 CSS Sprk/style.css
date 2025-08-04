@@ -1,0 +1,20 @@
+.info{
+    color: rgb(129, 11, 213);
+    background-color: rgb(213, 208, 208);
+    font-weight: 700;
+    text-decoration: underline;
+}
+p{
+    color: rgb(0, 0, 0);
+    background-color: rgb(211, 106, 106);
+    font-weight: 500;
+    text-decoration: none;
+}
+.demo{
+    color: black;
+    background-color: lightblue;
+    letter-spacing: 1px;
+    font-size: 12px;
+    line-height: 30px;
+    font-family: arial ,monospace;
+}
