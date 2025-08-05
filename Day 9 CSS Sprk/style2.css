@@ -1,0 +1,44 @@
+/* pseudo-Elements selectors*/
+h1::first-letter {
+  text-decoration: wavy underline red;
+  font-size: 80px;
+}
+
+h1::after {
+  content: " Technologies";
+  color: aqua;
+}
+
+h3::selection {
+  background-color: aquamarine;
+  color: brown;
+}
+
+p::first-line {
+  text-transform: uppercase;
+  text-decoration: dashed underline chartreuse;
+}
+
+input::placeholder {
+  color: red;
+}
+
+div {
+  border: 2px solid black;
+  margin: 20px;
+}
+
+/* Pseudo-class */
+/* div:nth-of-type(even) {
+  background-color: aqua;
+} */
+
+div:nth-of-type(2n) {
+  background-color: blueviolet;
+}
+div:nth-of-type(2n-1) {
+  background-color: orange;
+}
+div:nth-of-type(7) {
+  background-color: chartreuse;
+}
