@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: red;
+}
+.main{
+    height: 150px;
+    width: 450px;
+    border: 2px solid black;
+    margin-left: 10px;
+}
+.first{
+    background-color: rgb(200, 255, 0);
+    opacity: 0.4;
+}
+.second{
+    background-color: blue;
+    background-color: rgba(0, 0, 255, 0.278);
+}

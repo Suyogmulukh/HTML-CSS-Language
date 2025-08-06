@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+        /* 
+        Properties of Transitions
+        1. transition-duration
+        2. transition-delay
+        3. transition-timing-function
+        4. transition-property
+
+        5. transition: transition-property duration timing-function delay
+        */
+        .box {
+            margin-top: 50px;
+            margin-inline: auto;
+            width: 200px;
+            height: 200px;
+            border: 5px solid green;
+            background-color: yellow;
+            /* transition-property: background-color, margin-top; */
+            /* transition-property: all; */
+            /* transition-duration: 5s; */
+            /* transition-delay: 2s; */
+            /* transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1); */
+
+            /* transition: 5s ease-in 2s; */
+            transition: border-radius 4s ease-in-out, background-color 2s ease-in-out, margin-top 4s cubic-bezier(0.075, 0.82, 0.165, 1);
+        }
+
+        .box:hover {
+            margin-top: 200px;
+            border-radius: 50px;
+            background-color: red;
+        }
