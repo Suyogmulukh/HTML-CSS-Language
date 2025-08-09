@@ -1,0 +1,25 @@
+.box-1{
+    width: 400px;
+    height: 400px;
+    margin: 100px auto;
+    background-color: crimson;
+    border-radius: 20%;
+    box-shadow: 25px 15px 25px rgba(255, 0, 0, 0.558) ,-30px -10px 20px rgba(128, 128, 128, 0.47)
+}
+.box-2{
+    width: 400px;
+    height: 400px;
+    margin: 100px auto;
+    background-color: rgb(20, 220, 123);
+    border-radius: 20%;
+    box-shadow: 0px 0px 25px 25px rgba(122, 78, 78, 0.558)
+}
+.box-3{
+    width: 400px;
+    height: 400px;
+    margin: 100px auto;
+    background-color: rgba(166, 192, 200, 0.637);
+    border-radius: 20%;
+    box-shadow: inset 20px 20px 25px rgba(9, 2, 2, 0.705) ,inset -10px -20px 25px rgba(57, 54, 54, 0.705);
+    
+}
