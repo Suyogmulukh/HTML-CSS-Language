@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tripco - Travel Landing Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="font-sans main-style">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white shadow-md z-50">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <a href="#" class="text-2xl font-bold text-blue-600">TRIPCO</a>
+            </div>
+            
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#" class="text-gray-800 hover:text-blue-600">Home</a>
+                <a href="#" class="text-gray-800 hover:text-blue-600">Destinations</a>
+                <a href="#" class="text-gray-800 hover:text-blue-600">Packages</a>
+                <a href="#" class="text-gray-800 hover:text-blue-600">About</a>
+                <a href="#" class="text-gray-800 hover:text-blue-600">Contact</a>
+            </div>
+            
+            <div class="flex items-center space-x-4">
+                <button class="hidden md:block px-4 py-2 text-blue-600 border border-blue-600 rounded-full hover:bg-blue-600 hover:text-white transition">Sign In</button>
+                <button class="hidden md:block px-4 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition">Sign Up</button>
+                <button class="md:hidden text-gray-800 focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section flex items-center justify-center text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 symbol-decoration animate-bounce">Discover Your Dream Vacation</h1>
+            <p class="text-xl md:text-2xl mb-8">Explore the world's most beautiful destinations with our expert guides</p>
+            
+            <div class="max-w-2xl mx-auto bg-white rounded-full p-1 flex">
+                <input type="text" placeholder="Where do you want to go?" class="flex-grow px-6 py-3 rounded-full focus:outline-none text-gray-800">
+                <button class="bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700 transition">Search</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Destinations -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Popular Destinations</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Explore our most sought-after travel destinations that will leave you breathless</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="destinations-grid">
+                <!-- Initial 3 destinations will remain visible -->
+                <!-- Destination 1 -->
+                <div class="destination-card bg-white rounded-xl overflow-hidden shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Beach Destination" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-4">
+                            <h3 class="text-xl font-bold text-gray-800">Bali, Indonesia</h3>
+                            <span class="text-blue-600 font-bold">$899</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Experience the tropical paradise with pristine beaches and vibrant culture.</p>
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center">
+                                <i class="fas fa-star text-yellow-400 mr-1"></i>
+                                <span class="text-gray-700">4.8 (256 reviews)</span>
+                            </div>
+                            <button class="text-blue-600 hover:text-blue-800 font-medium">Explore</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Destination 2 -->
+                <div class="destination-card bg-white rounded-xl overflow-hidden shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Mountain Destination" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-4">
+                            <h3 class="text-xl font-bold text-gray-800">Swiss Alps</h3>
+                            <span class="text-blue-600 font-bold">$1,299</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Breathtaking mountain views and world-class skiing experiences.</p>
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center">
+                                <i class="fas fa-star text-yellow-400 mr-1"></i>
+                                <span class="text-gray-700">4.9 (312 reviews)</span>
+                            </div>
+                            <button class="text-blue-600 hover:text-blue-800 font-medium">Explore</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Destination 3 -->
+                <div class="destination-card bg-white rounded-xl overflow-hidden shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1503917988258-f87a78e3c995?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1587&q=80" alt="City Destination" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-4">
+                            <h3 class="text-xl font-bold text-gray-800">Paris, France</h3>
+                            <span class="text-blue-600 font-bold">$1,099</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">The city of love with iconic landmarks and exquisite cuisine.</p>
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center">
+                                <i class="fas fa-star text-yellow-400 mr-1"></i>
+                                <span class="text-gray-700">4.7 (289 reviews)</span>
+                            </div>
+                            <button class="text-blue-600 hover:text-blue-800 font-medium">Explore</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Additional destinations (hidden by default) -->
+                <div class="destination-card bg-white rounded-xl overflow-hidden shadow-lg hidden more-destinations">
+                    <img src="https://images.unsplash.com/photo-1518391846015-55a9cc003b25?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Tokyo Destination" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-4">
+                            <h3 class="text-xl font-bold text-gray-800">Tokyo, Japan</h3>
+                            <span class="text-blue-600 font-bold">$1,199</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Experience the vibrant blend of traditional culture and futuristic technology.</p>
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center">
+                                <i class="fas fa-star text-yellow-400 mr-1"></i>
+                                <span class="text-gray-700">4.8 (198 reviews)</span>
+                            </div>
+                            <button class="text-blue-600 hover:text-blue-800 font-medium">Explore</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="destination-card bg-white rounded-xl overflow-hidden shadow-lg hidden more-destinations">
+                    <img src="https://images.unsplash.com/photo-1523482580672-f109ba8cb9be?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="New York Destination" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-4">
+                            <h3 class="text-xl font-bold text-gray-800">New York, USA</h3>
+                            <span class="text-blue-600 font-bold">$999</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">The city that never sleeps with iconic landmarks and endless entertainment.</p>
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center">
+                                <i class="fas fa-star text-yellow-400 mr-1"></i>
+                                <span class="text-gray-700">4.7 (245 reviews)</span>
+                            </div>
+                            <button class="text-blue-600 hover:text-blue-800 font-medium">Explore</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="destination-card bg-white rounded-xl overflow-hidden shadow-lg hidden more-destinations">
+                    <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Sydney Destination" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-4">
+                            <h3 class="text-xl font-bold text-gray-800">Sydney, Australia</h3>
+                            <span class="text-blue-600 font-bold">$1,499</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Stunning harbor views, iconic opera house, and beautiful beaches.</p>
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center">
+                                <i class="fas fa-star text-yellow-400 mr-1"></i>
+                                <span class="text-gray-700">4.9 (276 reviews)</span>
+                            </div>
+                            <button class="text-blue-600 hover:text-blue-800 font-medium">Explore</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <label for="toggle-destinations" class="px-6 py-3 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition cursor-pointer">View All Destinations</label>
+                <input type="checkbox" id="toggle-destinations" class="hidden">
+                <button class="px-6 py-3 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition">View All Destinations</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Why Choose Tripco</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">We provide exceptional travel experiences tailored to your needs</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="text-center p-6">
+                    <div class="bg-blue-100 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-globe text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Worldwide Coverage</h3>
+                    <p class="text-gray-600">Access to thousands of destinations across all continents with our global network.</p>
+                </div>
+                
+                <div class="text-center p-6">
+                    <div class="bg-blue-100 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-medal text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Best Price Guarantee</h3>
+                    <p class="text-gray-600">We promise the best prices for all our travel packages with no hidden fees.</p>
+                </div>
+                
+                <div class="text-center p-6">
+                    <div class="bg-blue-100 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-headset text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">24/7 Customer Support</h3>
+                    <p class="text-gray-600">Our dedicated team is available round the clock to assist you with any queries.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">What Our Travelers Say</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Hear from our satisfied customers about their experiences</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="testimonial-card bg-white p-8 rounded-xl">
+                    <div class="flex items-center mb-4">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah J." class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold text-gray-800">Sarah J.</h4>
+                            <div class="flex">
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <i class="fas fa-star text-yellow-400"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"Our trip to Bali was absolutely perfect! Tripco handled everything from flights to accommodations seamlessly. Will definitely book with them again!"</p>
+                </div>
+                
+                <div class="testimonial-card bg-white p-8 rounded-xl">
+                    <div class="flex items-center mb-4">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael T." class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold text-gray-800">Michael T.</h4>
+                            <div class="flex">
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <i class="fas fa-star text-yellow-400"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"The Swiss Alps package exceeded all expectations. The guides were knowledgeable and the itinerary was perfectly balanced between adventure and relaxation."</p>
+                </div>
+                
+                <div class="testimonial-card bg-white p-8 rounded-xl">
+                    <div class="flex items-center mb-4">
+                        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Emily R." class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold text-gray-800">Emily R.</h4>
+                            <div class="flex">
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <i class="fas fa-star text-yellow-400"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"Paris was magical! Tripco's recommendations for restaurants and hidden gems made our trip unforgettable. Their customer service is truly exceptional."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="py-16 bg-blue-600 text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-4">Stay Updated With Our Travel Deals</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Subscribe to our newsletter and receive exclusive offers and travel inspiration</p>
+            
+            <div class="max-w-xl mx-auto flex">
+                <input type="email" placeholder="Your email address" class="flex-grow px-6 py-3 rounded-l-full focus:outline-none text-gray-800">
+                <button class="bg-blue-800 text-white px-6 py-3 rounded-r-full hover:bg-blue-900 transition">Subscribe</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">TRIPCO</h3>
+                    <p class="text-gray-400">Making travel dreams come true since 2015. We specialize in creating unforgettable experiences around the globe.</p>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Home</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Destinations</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Packages</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">About Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Support</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">FAQs</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Terms of Service</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Refund Policy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Travel Insurance</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Contact Us</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt mr-2"></i>
+                            <span>123 Travel Street, Suite 100, New York, NY 10001</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt mr-2"></i>
+                            <span>+1 (555) 123-4567</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-2"></i>
+                            <span>info@tripco.com</span>
+                        </li>
+                    </ul>
+                    
+                    <div class="flex space-x-4 mt-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2023 Tripco. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

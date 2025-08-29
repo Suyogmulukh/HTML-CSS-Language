@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airbnb | Holiday rentals, cabins, beach houses & more</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .search-bar {
+            box-shadow: 0 1px 2px rgba(0,0,0,0.08), 0 4px 12px rgba(0,0,0,0.05);
+        }
+        .property-card:hover {
+            transform: scale(1.02);
+            transition: transform 0.2s ease;
+        }
+        .heart-icon:hover {
+            color: #ff385c;
+        }
+        .nav-item:hover {
+            border-bottom: 2px solid #000;
+        }
+        .active-nav {
+            border-bottom: 2px solid #000;
+        }
+        .category-item:hover {
+            border-bottom: 1px solid #000;
+        }
+    </style>
+</head>
+<body class="bg-white font-sans">
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-white border-b border-gray-200">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <a href="#" class="flex items-center">
+                    <i class="fab fa-airbnb text-3xl text-rose-500 mr-2"></i>
+                    <span class="text-xl font-bold text-rose-500 hidden md:block">airbnb</span>
+                </a>
+
+                <!-- Search Bar -->
+                <div class="hidden md:flex items-center justify-center flex-1 mx-8">
+                    <div class="search-bar flex items-center rounded-full border border-gray-300 py-2 px-4 w-full max-w-md">
+                        <input type="text" placeholder="Where are you going?" class="outline-none flex-grow bg-transparent">
+                        <div class="h-6 w-px bg-gray-300 mx-2"></div>
+                        <button class="bg-rose-500 text-white rounded-full p-2">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- User Menu -->
+                <div class="flex items-center space-x-4">
+                    <button class="hidden md:block text-sm font-medium">Become a Host</button>
+                    <div class="flex items-center space-x-2 border border-gray-300 rounded-full py-1 px-3 cursor-pointer hover:shadow-md">
+                        <i class="fas fa-bars text-gray-600"></i>
+                        <i class="fas fa-user-circle text-gray-600"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mobile Search -->
+            <div class="md:hidden mt-4">
+                <div class="search-bar flex items-center rounded-full border border-gray-300 py-2 px-4 w-full">
+                    <i class="fas fa-search text-gray-500 mr-2"></i>
+                    <div class="flex-grow">
+                        <span class="block text-sm font-medium">Anywhere</span>
+                        <span class="block text-xs text-gray-500">Any week · Add guests</span>
+                    </div>
+                    <button class="bg-rose-500 text-white rounded-full p-1">
+                        <i class="fas fa-filter"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Categories -->
+            <div class="hidden md:flex items-center justify-between mt-4 overflow-x-auto pb-2">
+                <div class="flex space-x-8">
+                    <a href="#" class="category-item flex flex-col items-center pb-2">
+                        <i class="fas fa-home text-gray-500 mb-1"></i>
+                        <span class="text-xs">Homes</span>
+                    </a>
+                    <a href="#" class="category-item flex flex-col items-center pb-2">
+                        <i class="fas fa-umbrella-beach text-gray-500 mb-1"></i>
+                        <span class="text-xs">Beach</span>
+                    </a>
+                    <a href="#" class="category-item flex flex-col items-center pb-2">
+                        <i class="fas fa-tree text-gray-500 mb-1"></i>
+                        <span class="text-xs">Cabins</span>
+                    </a>
+                    <a href="#" class="category-item flex flex-col items-center pb-2">
+                        <i class="fas fa-water text-gray-500 mb-1"></i>
+                        <span class="text-xs">Lakefront</span>
+                    </a>
+                    <a href="#" class="category-item flex flex-col items-center pb-2">
+                        <i class="fas fa-city text-gray-500 mb-1"></i>
+                        <span class="text-xs">City</span>
+                    </a>
+                    <a href="#" class="category-item flex flex-col items-center pb-2">
+                        <i class="fas fa-campground text-gray-500 mb-1"></i>
+                        <span class="text-xs">Camping</span>
+                    </a>
+                    <a href="#" class="category-item flex flex-col items-center pb-2">
+                        <i class="fas fa-igloo text-gray-500 mb-1"></i>
+                        <span class="text-xs">Arctic</span>
+                    </a>
+                    <a href="#" class="category-item flex flex-col items-center pb-2">
+                        <i class="fas fa-swimming-pool text-gray-500 mb-1"></i>
+                        <span class="text-xs">Amazing pools</span>
+                    </a>
+                </div>
+                <button class="flex items-center text-sm font-medium border border-gray-300 rounded-full px-4 py-1 ml-4">
+                    <i class="fas fa-sliders-h text-gray-500 mr-2"></i>
+                    Filters
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8">
+        <!-- Property Grid -->
+        <section>
+            <h2 class="text-2xl font-bold mb-6">Popular homes in Los Angeles</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <!-- Property Card 1 -->
+                <div class="property-card rounded-xl overflow-hidden">
+                    <div class="relative">
+                        <img src="https://a0.muscache.com/im/pictures/2f49e86f-0045-4fda-ad76-98241c2464f1.jpg" alt="Room in Los Angeles" class="w-full h-64 object-cover rounded-xl">
+                        <button class="heart-icon absolute top-3 right-3 text-white text-xl">
+                            <i class="far fa-heart"></i>
+                        </button>
+                        <div class="absolute bottom-3 left-3 bg-white px-2 py-1 rounded-md text-xs font-medium">
+                            Guest favourite
+                        </div>
+                    </div>
+                    <div class="mt-3">
+                        <div class="flex justify-between">
+                            <h3 class="font-medium">Room in Los Angeles</h3>
+                            <div class="flex items-center">
+                                <i class="fas fa-star text-xs"></i>
+                                <span class="text-sm ml-1">4.94</span>
+                            </div>
+                        </div>
+                        <p class="text-gray-500 text-sm">2 nights</p>
+                        <p class="text-gray-500 text-sm">₹10,183 total</p>
+                    </div>
+                </div>
+
+                <!-- Property Card 2 -->
+                <div class="property-card rounded-xl overflow-hidden">
+                    <div class="relative">
+                        <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1343086144920768325/original/ef21d515-0c7e-4142-ae9c-df2058e48148.jpeg" alt="Room in Downey" class="w-full h-64 object-cover rounded-xl">
+                        <button class="heart-icon absolute top-3 right-3 text-white text-xl">
+                            <i class="far fa-heart"></i>
+                        </button>
+                        <div class="absolute bottom-3 left-3 bg-white px-2 py-1 rounded-md text-xs font-medium">
+                            Guest favourite
+                        </div>
+                    </div>
+                    <div class="mt-3">
+                        <div class="flex justify-between">
+                            <h3 class="font-medium">Room in Downey</h3>
+                            <div class="flex items-center">
+                                <i class="fas fa-star text-xs"></i>
+                                <span class="text-sm ml-1">5.0</span>
+                            </div>
+                        </div>
+                        <p class="text-gray-500 text-sm">2 nights</p>
+                        <p class="text-gray-500 text-sm">₹13,849 total</p>
+                    </div>
+                </div>
+
+                <!-- Property Card 3 -->
+                <div class="property-card rounded-xl overflow-hidden">
+                    <div class="relative">
+                        <img src="https://a0.muscache.com/im/pictures/miso/Hosting-671262264161601880/original/ce52736a-ec03-4c51-ac7c-7ed2a65eb2ae.png" alt="Room in West Covina" class="w-full h-64 object-cover rounded-xl">
+                        <button class="heart-icon absolute top-3 right-3 text-white text-xl">
+                            <i class="far fa-heart"></i>
+                        </button>
+                        <div class="absolute bottom-3 left-3 bg-white px-2 py-1 rounded-md text-xs font-medium">
+                            Guest favourite
+                        </div>
+                    </div>
+                    <div class="mt-3">
+                        <div class="flex justify-between">
+                            <h3 class="font-medium">Room in West Covina</h3>
+                            <div class="flex items-center">
+                                <i class="fas fa-star text-xs"></i>
+                                <span class="text-sm ml-1">4.82</span>
+                            </div>
+                        </div>
+                        <p class="text-gray-500 text-sm">2 nights</p>
+                        <p class="text-gray-500 text-sm">₹7,230 total</p>
+                    </div>
+                </div>
+
+                <!-- Property Card 4 -->
+                <div class="property-card rounded-xl overflow-hidden">
+                    <div class="relative">
+                        <img src="https://a0.muscache.com/im/pictures/airflow/Hosting-3612212/original/31663254-803c-42ad-90ee-cd7e718b5816.jpg" alt="Room in Los Angeles" class="w-full h-64 object-cover rounded-xl">
+                        <button class="heart-icon absolute top-3 right-3 text-white text-xl">
+                            <i class="far fa-heart"></i>
+                        </button>
+                        <div class="absolute bottom-3 left-3 bg-white px-2 py-1 rounded-md text-xs font-medium">
+                            Guest favourite
+                        </div>
+                    </div>
+                    <div class="mt-3">
+                        <div class="flex justify-between">
+                            <h3 class="font-medium">Room in Los Angeles</h3>
+                            <div class="flex items-center">
+                                <i class="fas fa-star text-xs"></i>
+                                <span class="text-sm ml-1">4.99</span>
+                            </div>
+                        </div>
+                        <p class="text-gray-500 text-sm">2 nights</p>
+                        <p class="text-gray-500 text-sm">₹17,210 total</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Next Section -->
+        <section class="mt-16">
+            <h2 class="text-2xl font-bold mb-6">Available next month in San Diego</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <!-- Property Card 5 -->
+                <div class="property-card rounded-xl overflow-hidden">
+                    <div class="relative">
+                        <img src="https://a0.muscache.com/im/pictures/10647cb4-3334-44d9-a0c9-b7591e1d52e8.jpg" alt="Room in Chula Vista" class="w-full h-64 object-cover rounded-xl">
+                        <button class="heart-icon absolute top-3 right-3 text-white text-xl">
+                            <i class="far fa-heart"></i>
+                        </button>
+                        <div class="absolute bottom-3 left-3 bg-white px-2 py-1 rounded-md text-xs font-medium">
+                            Guest favourite
+                        </div>
+                    </div>
+                    <div class="mt-3">
+                        <div class="flex justify-between">
+                            <h3 class="font-medium">Room in Chula Vista</h3>
+                            <div class="flex items-center">
+                                <i class="fas fa-star text-xs"></i>
+                                <span class="text-sm ml-1">4.92</span>
+                            </div>
+                        </div>
+                        <p class="text-gray-500 text-sm">2 nights</p>
+                        <p class="text-gray-500 text-sm">₹12,933 total</p>
+                    </div>
+                </div>
+
+                <!-- Property Card 6 -->
+                <div class="property-card rounded-xl overflow-hidden">
+                    <div class="relative">
+                        <img src="https://a0.muscache.com/im/pictures/b57bd76f-aece-4d35-b7a2-cdf8b45a66fd.jpg" alt="Room in Chula Vista" class="w-full h-64 object-cover rounded-xl">
+                        <button class="heart-icon absolute top-3 right-3 text-white text-xl">
+                            <i class="far fa-heart"></i>
+                        </button>
+                        <div class="absolute bottom-3 left-3 bg-white px-2 py-1 rounded-md text-xs font-medium">
+                            Guest favourite
+                        </div>
+                    </div>
+                    <div class="mt-3">
+                        <div class="flex justify-between">
+                            <h3 class="font-medium">Room in Chula Vista</h3>
+                            <div class="flex items-center">
+                                <i class="fas fa-star text-xs"></i>
+                                <span class="text-sm ml-1">4.94</span>
+                            </div>
+                        </div>
+                        <p class="text-gray-500 text-sm">2 nights</p>
+                        <p class="text-gray-500 text-sm">₹12,220 total</p>
+                    </div>
+                </div>
+
+                <!-- Property Card 7 -->
+                <div class="property-card rounded-xl overflow-hidden">
+                    <div class="relative">
+                        <img src="https://a0.muscache.com/im/pictures/13e42585-41c0-48c2-b376-d1c5d0da8fe1.jpg" alt="Room in San Diego" class="w-full h-64 object-cover rounded-xl">
+                        <button class="heart-icon absolute top-3 right-3 text-white text-xl">
+                            <i class="far fa-heart"></i>
+                        </button>
+                    </div>
+                    <div class="mt-3">
+                        <div class="flex justify-between">
+                            <h3 class="font-medium">Room in San Diego</h3>
+                            <div class="flex items-center">
+                                <i class="fas fa-star text-xs"></i>
+                                <span class="text-sm ml-1">4.87</span>
+                            </div>
+                        </div>
+                        <p class="text-gray-500 text-sm">2 nights</p>
+                        <p class="text-gray-500 text-sm">₹11,303 total</p>
+                    </div>
+                </div>
+
+                <!-- Property Card 8 -->
+                <div class="property-card rounded-xl overflow-hidden">
+                    <div class="relative">
+                        <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1107301803323013258/original/aa6c4d36-cb7a-41b2-8b4f-f2a2d2a3d238.jpeg" alt="Guest house in San Diego" class="w-full h-64 object-cover rounded-xl">
+                        <button class="heart-icon absolute top-3 right-3 text-white text-xl">
+                            <i class="far fa-heart"></i>
+                        </button>
+                        <div class="absolute bottom-3 left-3 bg-white px-2 py-1 rounded-md text-xs font-medium">
+                            Guest favourite
+                        </div>
+                    </div>
+                    <div class="mt-3">
+                        <div class="flex justify-between">
+                            <h3 class="font-medium">Guest house in San Diego</h3>
+                            <div class="flex items-center">
+                                <i class="fas fa-star text-xs"></i>
+                                <span class="text-sm ml-1">5.0</span>
+                            </div>
+                        </div>
+                        <p class="text-gray-500 text-sm">2 nights</p>
+                        <p class="text-gray-500 text-sm">₹25,661 total</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Show More Button -->
+        <div class="flex justify-center mt-10">
+            <button class="border border-black rounded-lg px-6 py-3 font-medium hover:bg-gray-100 transition">
+                Show all (200+)
+            </button>
+        </div>
+
+        <!-- Inspiration Section -->
+        <section class="mt-16">
+            <h2 class="text-2xl font-bold mb-6">Inspiration for your next trip</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="relative rounded-xl overflow-hidden h-64">
+                    <img src="https://a0.muscache.com/im/pictures/71e23854-a3c7-491c-b715-6e86233a293f.jpg" alt="Paris" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black bg-opacity-20 flex items-end p-4">
+                        <h3 class="text-white text-xl font-bold">Paris</h3>
+                    </div>
+                </div>
+                <div class="relative rounded-xl overflow-hidden h-64">
+                    <img src="https://a0.muscache.com/im/pictures/dbb2b5ef-2efe-4099-81ac-cf8d5bcf8e45.jpg" alt="Tokyo" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black bg-opacity-20 flex items-end p-4">
+                        <h3 class="text-white text-xl font-bold">Tokyo</h3>
+                    </div>
+                </div>
+                <div class="relative rounded-xl overflow-hidden h-64">
+                    <img src="https://a0.muscache.com/im/pictures/3a7b8005-28b8-48b8-8efa-0a6f00b7f2d4.jpg" alt="New York" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black bg-opacity-20 flex items-end p-4">
+                        <h3 class="text-white text-xl font-bold">New York</h3>
+                    </div>
+                </div>
+                <div class="relative rounded-xl overflow-hidden h-64">
+                    <img src="https://a0.muscache.com/im/pictures/5f5e08a7-8676-4a7c-af3e-50863d2b58a4.jpg" alt="London" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black bg-opacity-20 flex items-end p-4">
+                        <h3 class="text-white text-xl font-bold">London</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-100 border-t border-gray-200 mt-16">
+        <div class="container mx-auto px-4 py-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="font-bold mb-4">Support</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-sm hover:underline">Help Center</a></li>
+                        <li><a href="#" class="text-sm hover:underline">AirCover</a></li>
+                        <li><a href="#" class="text-sm hover:underline">Safety information</a></li>
+                        <li><a href="#" class="text-sm hover:underline">Supporting people with disabilities</a></li>
+                        <li><a href="#" class="text-sm hover:underline">Cancellation options</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-bold mb-4">Community</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-sm hover:underline">Airbnb.org: disaster relief housing</a></li>
+                        <li><a href="#" class="text-sm hover:underline">Combating discrimination</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-bold mb-4">Hosting</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-sm hover:underline">Airbnb your home</a></li>
+                        <li><a href="#" class="text-sm hover:underline">AirCover for Hosts</a></li>
+                        <li><a href="#" class="text-sm hover:underline">Hosting resources</a></li>
+                        <li><a href="#" class="text-sm hover:underline">Community forum</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-bold mb-4">Airbnb</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-sm hover:underline">Newsroom</a></li>
+                        <li><a href="#" class="text-sm hover:underline">New features</a></li>
+                        <li><a href="#" class="text-sm hover:underline">Careers</a></li>
+                        <li><a href="#" class="text-sm hover:underline">Investors</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-300 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <div class="flex items-center space-x-4 mb-4 md:mb-0">
+                    <span class="text-sm">© 2023 Airbnb, Inc.</span>
+                    <a href="#" class="text-sm hover:underline">Privacy</a>
+                    <a href="#" class="text-sm hover:underline">Terms</a>
+                    <a href="#" class="text-sm hover:underline">Sitemap</a>
+                </div>
+                <div class="flex items-center space-x-6">
+                    <div class="flex items-center">
+                        <i class="fas fa-globe mr-2"></i>
+                        <span class="text-sm font-medium">English (IN)</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-rupee-sign mr-2"></i>
+                        <span class="text-sm font-medium">INR</span>
+                    </div>
+                    <div class="flex space-x-4">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Toggle favorite heart icon
+        document.querySelectorAll('.heart-icon').forEach(icon => {
+            icon.addEventListener('click', function() {
+                if (this.innerHTML.includes('far')) {
+                    this.innerHTML = '<i class="fas fa-heart text-rose-500"></i>';
+                } else {
+                    this.innerHTML = '<i class="far fa-heart"></i>';
+                }
+            });
+        });
+
+        // Mobile menu toggle (would need additional HTML)
+        // document.getElementById('mobile-menu-button').addEventListener('click', function() {
+        //     document.getElementById('mobile-menu').classList.toggle('hidden');
+        // });
+    </script>
+</body>
+</html>
+
+<!-- https://forever.travel-assets.com/flex/flexmanager/images/2025/04/03/Hcom_Hero_Banner_Masked.webp?impolicy=fcrop&w=1200&h=400&q=mediumHigh -->

@@ -1,29 +1,207 @@
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SPRK TRAVELS | EXPLORE WORLD WITH US</title>
-     <link rel="shortcut icon" href="./resorces/images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="./resources/images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./resorces/CSS/style.css">
+
+    <!-- Font awesome link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body>
-    <div class="wrapper">
-        <nav class="background nav-bg">
+    <div id="wrapper">
+        
             <div class="container nav-container">
                 <div class="logo">
-                    <a href="index.html">
+                    <a href="./index.html">
+
                         <span class="S-char">S</span><span>PRK</span>TRAVELS
                     </a>
                 </div>
+                <input type="checkbox" id="nav-toggle" class="nav-toggle" hidden>
                 <div class="nav-links">
-                    <a href="" class="nav-link">Destination</a>
-                    <a href="" class="nav-link">Packages</a>
-                    <a href="" class="nav-link">Contact Us</a>
+                    <a href="#destination" class="nav-link">Destination</a>
+                    <a href="#packages" class="nav-link">Package</a>
+                    <a href="#cta" class="nav-link">Contact Us</a>
                 </div>
+                <label for="nav-toggle" class="hamburger">
+                    <i class="fa-solid fa-bars"></i>
+                </label>
             </div>
         </nav>
+
+        <!-- Hero Section -->
+        <section id="hero">
+            <div class="hero-container">
+
+                <!-- Video -->
+                <video muted loop autoplay class="hero-video">
+                    <source src="https://videos.pexels.com/video-files/2169880/2169880-uhd_2560_1440_30fps.mp4">
+                </video>
+                <div class="video-overlay"></div>
+                <!-- Text-Content -->
+                <div class="hero-content">
+                    <div class="hero-text">
+
+                        <h1 class="main-heading"><i class="fa-solid fa-globe"></i>Explore World With Us</h1>
+                        <h2 class="sub-heading">We help you <span class="moving-text"></span></h2>
+                        <div class="para-div">
+                            <p class="paragraph">Travel isn't just about places — it's about moments. At SPRK Travels,
+                                we specialize in
+                                crafting
+                                luxury travel
+                                experiences tailored to your preferences, down to the finest detail. Discover the world
+                                in
+                                comfort and style.</p>
+
+                        </div>
+                        <a href="" class="btn-primary">Start Your Journey</a>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Cards Section | Destinations -->
+        <section id="destination">
+            <div class="background">
+
+                <div class="container destination-container">
+                    <h2 class="main-heading destination-heading"><i class="fa-solid fa-star"></i> Top Destinations</h2>
+                    <div class="card-container">
+                        <div class="card"
+                            style="background-image: url('https://cdn.pixabay.com/photo/2018/04/25/09/26/eiffel-tower-3349075_1280.jpg');">
+                            <h1 class="sub-heading">Paris</h1>
+                        </div>
+                        <div class="card"
+                            style="background-image: url('https://cdn.pixabay.com/photo/2017/11/24/21/49/bali-2975787_1280.jpg');">
+                            <h1 class="sub-heading">Bali</h1>
+                        </div>
+                        <div class="card"
+                            style="background-image: url('https://cdn.pixabay.com/photo/2022/01/15/23/03/burj-khalifa-6940925_1280.jpg');">
+                            <h1 class="sub-heading">Dubai</h1>
+                        </div>
+                        <div class="card"
+                            style="background-image: url('https://cdn.pixabay.com/photo/2017/04/12/00/51/tower-2223305_1280.jpg');">
+                            <h1 class="sub-heading">London</h1>
+                        </div>
+                        <div class="card"
+                            style="background-image: url('https://cdn.pixabay.com/photo/2020/04/21/19/30/rome-5074421_1280.jpg');">
+                            <h1 class="sub-heading">Italy</h1>
+                        </div>
+                        <div class="card"
+                            style="background-image: url('https://cdn.pixabay.com/photo/2024/07/20/15/52/mountains-8908538_1280.jpg');">
+                            <h1 class="sub-heading">Manali</h1>
+                        </div>
+                        <div class="card"
+                            style="background-image: url('https://cdn.pixabay.com/photo/2017/08/15/09/40/church-2643296_1280.jpg');">
+                            <h1 class="sub-heading">Goa</h1>
+                        </div>
+                        <div class="card"
+                            style="background-image: url('https://cdn.pixabay.com/photo/2021/12/07/07/30/tourism-6852475_1280.jpg');">
+                            <h1 class="sub-heading">Kerala</h1>
+                        </div>
+                        <div class="card last-card"
+                            style="background-image: url('https://cdn.pixabay.com/photo/2019/08/14/09/52/haji-peer-azad-kashmir-4405256_1280.jpg');">
+                            <h1 class="sub-heading">Kashmir</h1>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="packages">
+
+            <div class="container package-container">
+                <h1 class="main-heading destination-heading"><i class="fa-solid fa-gifts"></i> Exclusive Packages</h1>
+                <div class="para-div">
+                    <p class="paragraph">One place for every explorer!</p>
+                </div>
+                <div class="package-flex">
+                    <div class="btn-primary package"><i class="fa-solid fa-users"></i> Weekend Party</div>
+                    <div class="btn-primary package"><i class="fa-solid fa-umbrella-beach"></i> Beach Vibes</div>
+                    <div class="btn-primary package"><i class="fa-solid fa-person-hiking"></i> Adventure Trails</div>
+                </div>
+            </div>
+
+            <div class="fadded-text">
+                Best Deals
+            </div>
+
+        </section>
+        <!-- call to action section CTA -->
+        <section id="cta">
+            <div class="background">
+                <div class="container contact-container">
+                    <h1 class="contact-main-heading">ready to travel together?</h1>
+                    <h2 class="contact-sub-heading">Have a destination in mind or a question to ask? We'd
+                        love to hear from you!
+                    </h2>
+
+                    <div class="form-container">
+                        <form action="#" class="form">
+
+                            <input type="text" name="name" id="" placeholder="Enter your name" class="form-field">
+                            <input type="email" name="email" id="" placeholder="Enter your email address"
+                                class="form-field">
+                            <input type="text" name="subject" id="" placeholder="Enter your subject" class="form-field">
+                            <textarea name="message" id="" placeholder="Enter your message" cols="30" rows="10"
+                                class="form-field"></textarea>
+
+                            <button type="submit" class="btn-primary form-button">Send Message <i
+                                    class="fa-solid fa-paper-plane"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer id="footer">
+
+            <div class="container footer-container">
+                <div class="footer-para">
+                    <p><i class="fa-regular fa-copyright"></i> All Right Reserved 2025.</p>
+                </div>
+                <div class="social-links">
+                    <a href="" class="social"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="" class="social"><i class="fa-brands fa-square-linkedin"></i></a>
+                    <a href="" class="social"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+        </footer>
     </div>
 
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        const phrases = [
+            "make unforgettable memories",
+            "discover hidden gems",
+            "live the journey",
+            "create family memories",
+            "travel beyond borders",
+            "escape the ordinary"
+        ];
+
+        var typed = new Typed('.moving-text', {
+            strings: phrases,
+            smartBackspace: true,
+            typeSpeed: 100, // 0.1 sec
+            backSpeed: 80,
+            backDelay: 1000,
+            loop: true,
+            shuffle: true,
+
+        });
+    </script>
 </body>
+
 </html>
