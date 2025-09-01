@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h1 {
+    text-align: center;
+    margin-top: 30px;
+}
+.container {
+  border: 5px solid red;
+  width: 90%;
+  height: 500px;
+  margin-inline: auto;
+  margin-top: 30px;
+  display: flex;
+  /* gap: 20px; */
+  /* flex-direction: row-reverse; column-reverse, row(default), column (Modify the direction of main axis) */
+  flex-direction: row;
+  /* justify-content: start; */
+  justify-content: space-around;
+  /* justify-content: space-evenly; */
+  /* justify-content: space-between; */
+  /* justify-content: center; */
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.box {
+  width: 150px;
+  height: 50px;
+}
+
+.first {
+  background-color: aqua;
+}
+.second {
+  background-color: yellow;
+}
+.third {
+  background-color: brown;
+}
+.fourth {
+  background-color: bisque;
+}
