@@ -1,0 +1,149 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    /* background-color: aliceblue; */
+    position: relative;
+}
+.body {
+    position: absolute;
+    width: 25%;
+    height: 70%;
+    /* background-color: aquamarine; */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% ,-50%);
+}
+h1{
+    font-family: gilroy;
+    text-align: center;
+    color: gray;
+    font-weight: 500;
+}
+.first{
+    width: 100%;
+    height: 10%;
+    position: absolute;
+    top: 3.3rem;
+    /* background-color: rgb(101, 135, 62); */
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.rejoin{
+    padding: 1rem 2.5rem;
+    /* background-color: white; */
+    color: rgba(39, 39, 201, 0.901);
+    font-weight: 700;
+    border-radius: 2rem ;
+    border: 2px solid skyblue;
+    background-color:  transparent;
+}
+.rejoin:hover{
+    background-color: rgba(39, 39, 201, 0.901);
+    color: white;
+    transition: 0.4s ease-in-out;
+}
+.return{
+    padding: 1rem 3rem;
+    /* background-color: white; */
+    color: white;
+    font-weight: 700;
+    border-radius: 2rem ;
+    /* border: 2px solid skyblue; */
+    background-color:  rgba(39, 39, 201, 0.901);
+}
+.return:hover{
+    transition: 0.4s ease-in-out;
+    color: rgba(39, 39, 201, 0.901);
+    background-color: white;
+}
+.second{
+    position: absolute;
+    width: 95%;
+    height: 30%;
+    /* background-color: brown; */
+    top: 25%;
+    left: 0.6rem;
+    box-shadow: 1px 1px 5px ;
+    border-radius: 5px;
+}
+.second h2{
+    position: relative;
+    top: 1.5rem;
+    left: 1.5rem;
+    font-size: medium;
+    font-family: gilroy;
+    font-weight: 500;
+}
+.star{
+    position: relative;
+    top: 2.5rem;
+    display: flex;
+    justify-content: space-around;
+}
+.ri-star-line{
+    font-size: xx-large;
+    color: gray;
+}
+.second h3{
+    position: absolute;
+    display: inline;
+    left: 1.4rem;
+    top:70%;
+    font-size: medium;
+    color: gray;
+}
+.verygood{
+    /* position: absolute; */
+    margin-left: 70%;
+    font-size: medium;
+    color: gray;
+}
+.third{
+    width: 100%;
+    height: 30%;
+    /* background-color: blueviolet; */
+    position: absolute;
+    top: 60%;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px ;
+}
+.ri-shield-keyhole-fill{
+    position: absolute;
+    top: 2rem;
+    left: 2%;
+    font-size: 60px;
+    color: blue;
+}
+.third h3{
+    position: absolute;
+    left: 20%;
+    top: 2rem;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 700;
+    font-size: 20px;
+    color: gray;
+
+}
+.third h4{
+    position: absolute;
+    left: 21%;
+    top: 3.7rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    color: gray;
+}
+.third h2{
+    position: absolute;
+    left: 73%;
+    top:70%;
+    font-size: medium;
+    color: rgba(54, 136, 169, 0.866);
+    font-family: gilroy;
+}

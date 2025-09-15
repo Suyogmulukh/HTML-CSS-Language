@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container {
+    width: 100%;
+    height: 100vh;
+    background-color: #dddada;
+}
+.nav{
+    width: 100%;
+    height: 10%;
+    background-color: #9ec498;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.first {
+    width:28%;
+    cursor: pointer;
+    font: bold 1.1rem Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+     gap: 1rem;
+    align-items: center;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+.box{
+    height: 4.4rem;
+    width: 6rem;
+    padding: 1rem 1rem;
+    /* background-color: aquamarine; */
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.home:hover{
+    background-color: #92acc9;
+    color: white;
+}
+.about:hover{
+    background-color: #92acc9;
+    color: white;
+}
+.contact:hover{
+    background-color: #92acc9;
+    color: white;
+}
+
+.second{
+    width: 22%;
+    /* background-color: chartreuse; */
+    display: flex;
+    gap: 2rem;
+
+}
+.log{
+    background-color: #9ec498;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 20px;
+    font: bold 1.1rem Arial, sans-serif;
+}
+.signup{
+    padding: 0.7rem 1.8rem;
+}
+.login{
+    padding: 0.7rem 2rem;
+}
+.log:hover{
+    background-color: #92acc9;
+    color: white;
+}

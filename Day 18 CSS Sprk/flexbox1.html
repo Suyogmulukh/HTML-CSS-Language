@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FLEX</title>
+    <style>
+        .container {
+            width: 80%;
+            height: 500px;
+            background-color: rgb(233, 233, 233);
+            margin-inline: auto;
+            display: flex;
+            align-items: stretch;
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+
+        .box {
+            text-align: center;
+            border: 2px solid red;
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="text-align: center; margin-top: 20px;">FLEXBOX</h1>
+    <div class="container">
+        <div class="box first" style="background-color: beige; order: 3; flex-grow: 5;">
+            FIRST
+        </div>
+        <div class="box second" style="background-color: aqua; order: 4; flex-grow: 2;">
+            Second
+
+        </div>
+        <div class="box third" style="background-color: burlywood; order: 2; flex-grow: 0;">
+            THIRD
+        </div>
+        <!-- <div class="box fourth" style="background-color: violet; order: 5;">
+            FOURTH
+        </div>
+        <div class="box fifth" style="background-color: rgb(163, 218, 25); order: 1;">
+            FIFTH
+        </div> -->
+    </div>
+</body>
+
+</html>
